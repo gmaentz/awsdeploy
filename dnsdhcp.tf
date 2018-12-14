@@ -14,7 +14,7 @@ resource "aws_vpc_dhcp_options_association" "dns_resolver" {
 /* DNS PART ZONE AND RECORDS */
 resource "aws_route53_zone" "main" {
   name = "${var.DnsZoneName}"
-  vpc_id = "${aws_vpc.terraformmain.id}"
+  vpc = "${aws_vpc.terraformmain.id}"
   comment = "Managed by terraform"
 }
 
