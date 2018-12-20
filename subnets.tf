@@ -2,7 +2,7 @@ resource "aws_subnet" "PublicAZA" {
   vpc_id = "${aws_vpc.terraformmain.id}"
   cidr_block = "${var.Subnet-Public-AzA-CIDR}"
   tags {
-        Name = "PublicAZA1"
+        Name = "PublicAZA12"
   }
  availability_zone = "${data.aws_availability_zones.available.names[0]}"
 }
@@ -14,7 +14,7 @@ resource "aws_subnet" "PrivateAZA" {
   vpc_id = "${aws_vpc.terraformmain.id}"
   cidr_block = "${var.Subnet-Private-AzA-CIDR}"
   tags {
-        Name = "PublicAZB1"
+        Name = "PublicAZB12"
   }
   availability_zone = "${data.aws_availability_zones.available.names[1]}"
 }
